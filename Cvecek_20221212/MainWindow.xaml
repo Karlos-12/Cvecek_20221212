@@ -11,8 +11,26 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
-        <Rectangle Margin="40,40,40,40" Fill="#FF2E2E2E"/>
-        <Rectangle Margin="40,40,40,40" Fill="#FF2E2E2E" Grid.Column="1"/>
+        <Rectangle Margin="40,40,40,30" Fill="#FF2E2E2E"/>
+        <Rectangle Margin="40,40,40,30" Fill="#FF2E2E2E" Grid.Column="1"/>
+        <Label x:Name="Name_1" Content="Label" Height="46" Margin="79,40,79,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="Name_2" Content="Label" Height="46" Margin="79,40,79,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1"/>
+        <ProgressBar x:Name="life_1" Height="22" Margin="79,318,40,0" VerticalAlignment="Top" Foreground="Red"/>
+        <ProgressBar x:Name="shield_1" Height="22" Margin="79,345,40,0" VerticalAlignment="Top" Foreground="#FF006DFF"/>
+        <ProgressBar x:Name="xp_1" Height="22" Margin="79,372,40,0" VerticalAlignment="Top" Foreground="#FFFDFF00"/>
+        <ProgressBar x:Name="life_2" Height="22" Margin="79,318,40,0" VerticalAlignment="Top" Foreground="Red" Grid.Column="1"/>
+        <ProgressBar x:Name="shield_2" Height="22" Margin="79,345,40,0" VerticalAlignment="Top" Foreground="#FF006DFF" Grid.Column="1"/>
+        <ProgressBar x:Name="xp_2" Height="22" Margin="79,372,40,0" VerticalAlignment="Top" Foreground="#FFFDFF00" Grid.Column="1"/>
+        <Label Content="HP" HorizontalAlignment="Left" Height="22" Margin="40,318,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="HP" HorizontalAlignment="Left" Height="22" Margin="40,318,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1"/>
+        <Label Content="SH" HorizontalAlignment="Left" Height="22" Margin="40,345,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="SH" HorizontalAlignment="Left" Height="22" Margin="40,345,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1"/>
+        <Label Content="XP" HorizontalAlignment="Left" Height="22" Margin="40,372,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+        <Label Content="XP" HorizontalAlignment="Left" Height="22" Margin="40,372,0,0" VerticalAlignment="Top" Width="39" Background="{x:Null}" Foreground="White" FontWeight="Bold" HorizontalContentAlignment="Center" Grid.Column="1"/>
+        <Button Content="Atack" HorizontalAlignment="Left" Height="51" Margin="40,262,0,0" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" Foreground="White" Background="#FF4D4D4D" FontWeight="Bold" FontSize="20" Click="Atack_1"/>
+        <Button Content="Heal" HorizontalAlignment="Left" Height="51" Margin="200,262,0,0" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" Foreground="White" Background="#FF4D4D4D" FontWeight="Bold" FontSize="20" Click="Heal_1"/>
+        <Button Content="Atack" HorizontalAlignment="Left" Height="51" Margin="40,262,0,0" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" Foreground="White" Background="#FF4D4D4D" FontWeight="Bold" FontSize="20" Grid.Column="1" Click="Atack_2"/>
+        <Button Content="Heal" HorizontalAlignment="Left" Height="51" Margin="200,262,0,0" VerticalAlignment="Top" Width="160" BorderBrush="{x:Null}" Foreground="White" Background="#FF4D4D4D" FontWeight="Bold" FontSize="20" Grid.Column="1" Click="Heal_2"/>
 
     </Grid>
 </Window>
