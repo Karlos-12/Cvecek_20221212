@@ -33,8 +33,35 @@ namespace Cvecek_20221212
             update();
         }
 
+        int kolo = 0;
+
         public void update()
         {
+            switch(kolo)
+            {
+                case 0:
+                    a2.IsEnabled = false;
+                    h2.IsEnabled = false;
+                    g2.Background = new SolidColorBrush(Color.FromRgb(25, 25, 25));
+
+                    a1.IsEnabled = true;
+                    h1.IsEnabled = true;
+                    g1.Background = new SolidColorBrush(Color.FromRgb(46, 46, 46));
+                    kolo = 1;
+                    break;
+
+                case 1: 
+                    a1.IsEnabled = false;
+                    h1.IsEnabled = false;
+                    g1.Background = new SolidColorBrush(Color.FromRgb(25, 25, 25));
+
+                    a2.IsEnabled = true;
+                    h2.IsEnabled = true;
+                    g2.Background = new SolidColorBrush(Color.FromRgb(46, 46, 46));
+                    kolo = 0;
+                    break;
+            }
+
             Name_1.Content = Solider_1.name;
             Name_2.Content = Solider_2.name;
 
@@ -50,26 +77,35 @@ namespace Cvecek_20221212
 
             xp_1.Value = Solider_1.xp;
             xp_2.Value = Solider_2.xp;
+
+            Levl_1.Content = "Levl: " + Solider_1.levl;
+            Levl_2.Content = "Levl: " + Solider_2.levl;
+            atck_1.Content = "Atack: " + Solider_1.damage;
+            atck_2.Content = "Atack: " + Solider_2.damage;
         }
 
         private void Atack_1(object sender, RoutedEventArgs e)
         {
             Solider_1.Atack(Solider_2);
+            update();
         }
 
         private void Heal_1(object sender, RoutedEventArgs e)
         {
             Solider_1.Heal();
+            update();
         }
 
         private void Atack_2(object sender, RoutedEventArgs e)
         {
             Solider_2.Atack(Solider_1);
+            update();
         }
 
         private void Heal_2(object sender, RoutedEventArgs e)
         {
             Solider_2.Heal();
+            update();
         }
     }
 }
