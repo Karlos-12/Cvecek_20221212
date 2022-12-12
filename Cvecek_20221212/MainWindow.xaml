@@ -37,6 +37,9 @@
             <Label x:Name="atck_2" Content="Label" Height="33" Margin="0,187,160,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
             <Label x:Name="Levl_2" Content="Label" Height="33" Margin="160,187,0,0" VerticalAlignment="Top" Foreground="White" FontSize="18" FontWeight="Bold"/>
         </Grid>
+        <Grid x:Name="winscreen" Grid.ColumnSpan="2" Margin="0,0,0,0" Background="#FF1A1A1A" Visibility="Hidden">
+            <Label x:Name="wintxt" Content="Label" HorizontalAlignment="Center" Height="84" VerticalAlignment="Center" Width="380" Background="{x:Null}" Foreground="White" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="32" FontWeight="Bold"/>
+        </Grid>
 
     </Grid>
 </Window>

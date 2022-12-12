@@ -82,6 +82,17 @@ namespace Cvecek_20221212
             Levl_2.Content = "Levl: " + Solider_2.levl;
             atck_1.Content = "Atack: " + Solider_1.damage;
             atck_2.Content = "Atack: " + Solider_2.damage;
+
+            if(Solider_1.hp <= 0)
+            {
+                winscreen.Visibility = Visibility.Visible;
+                wintxt.Content = Solider_2.name + " has won the battle!";
+            }
+            else if(Solider_2.hp <= 0)
+            {
+                winscreen.Visibility = Visibility.Visible;
+                wintxt.Content = Solider_1.name + " has won the battle!";
+            }
         }
 
         private void Atack_1(object sender, RoutedEventArgs e)
